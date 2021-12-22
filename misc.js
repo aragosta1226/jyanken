@@ -8,7 +8,7 @@ class Star{
         this.x  = rand(0, FIELD_W) << 8;
         this.y  = rand(0, FIELD_H) << 8;
         this.vx = 0;
-        this.vy = rand(30, 200);
+        this.vy = rand(100, 300);
         this.sz = rand(1, 2);
     }
 
@@ -24,8 +24,8 @@ class Star{
     }
 
     update() {
-        this.x += this.vx;
-        this.y += this.vy;
+        this.x += this.vx * starSpeed / 100;
+        this.y += this.vy * starSpeed / 100;
         if(this.y > FIELD_H << 8) {
             this.y = 0;
             this.x = rand(0, FIELD_W) << 8;
@@ -51,8 +51,8 @@ class CharaBase {
         this.x += this.vx;
         this.y += this.vy;
 
-        if(this.x < 0 || this.x > FIELD_W << 8
-            || this.y < 0 || this.y > FIELD_H << 8) this.kill = true;
+        if(this.x + (100 << 8) < 0 || this.x - (100 << 8) > FIELD_W << 8
+            || this.y + (100 << 8) < 0 || this.y - (100 << 8)> FIELD_H << 8) this.kill = true;
     }
 
     draw() {
@@ -97,6 +97,12 @@ function explosion(x, y, vx, vy) {
 // キーボードが押された時
 document.onkeydown = function(e) {
     key[e.keyCode] = true;
+    if(gameOver && e.keyCode === 82) {
+        delete jiki;
+        jiki = new Jiki();
+        gameOver = false;
+        score = 0;
+    }
 }
 
 // キーボードが離された時
@@ -135,7 +141,7 @@ function checkHit(x1, y1, r1, x2, y2, r2) {
 
     return r * r >= a * a + b * b;
 
-    // // 矩形同 士の当たり判定
+    // // 矩形同士の当たり判定
     // let left1 = x1 >> 8;
     // let right1 = left1 + w1;
     // let top1 = y1 >> 8;
