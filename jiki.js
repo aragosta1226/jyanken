@@ -60,7 +60,7 @@ class Jiki {
         this.count  = 0;
     }
 
-　　// 自機の移動
+    // 自機の移動
     update() {
         this.count++;
         if(this.damage)this.damage--;
@@ -101,7 +101,7 @@ class Jiki {
              this.y += this.speed;
     }
 
-　　// 描画
+    // 描画
     draw() {
         if(this.muteki && (this.count & 1)) return;
         drawSprite(2 + (this.anime >> 2), this.x, this.y);
