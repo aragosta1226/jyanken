@@ -16,3 +16,4 @@
 - 音楽の自動再生がされない箇所にて５時間ほど持っていかれました。
 
 ## URL
+https://aragosta1226.github.io/jyanken/
