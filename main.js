@@ -30,7 +30,7 @@ const FIELD_H = SCREEN_H + 40;
 // 星の数
 const STAR_MAX = 300;
 
-//音鳴らない
+// 音鳴らない
 // const music = new Audio();
 // function init() {
 //     music.preload = "auto";
