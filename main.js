@@ -11,6 +11,10 @@ const SMOOTHING = false;
 // ゲームスピード(ms)
 const GAME_SPEED = 1000/60;
 
+//音鳴らない
+// const bgm = new Audio("NES-Shooter-A01-1(Stage).mp3");
+// bgm.play();
+
 // 画面サイズ
 const SCREEN_W = 700;
 const SCREEN_H = 380;
@@ -26,24 +30,25 @@ const FIELD_H = SCREEN_H + 40;
 // 星の数
 const STAR_MAX = 300;
 
-const music = new Audio();
-function init() {
-    music.preload = "auto";
-    music.src = "NES-Shooter-A01-1(Stage).mp3";
-    music.load();
+//音鳴らない
+// const music = new Audio();
+// function init() {
+//     music.preload = "auto";
+//     music.src = "NES-Shooter-A01-1(Stage).mp3";
+//     music.load();
 
-    music.addEventListener("ended", function() {
-        music.currentTime = 0;
-        music.play();
-    }, false);
-}
+//     music.addEventListener("ended", function() {
+//         music.currentTime = 0;
+//         music.play();
+//     }, false);
+// }
 
-function play() {
-    music.loop = true;
-    music.play();
-}
+// function play() {
+//     music.loop = true;
+//     music.play();
+// }
 
-init();
+// init();
 
 // キャンバス
 let can = document.getElementById("can");
