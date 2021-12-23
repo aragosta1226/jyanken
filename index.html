@@ -8,7 +8,20 @@
     <div class="mainvisual">
         <img src="ZAZY.jpeg" width="100%" height="95%" alt="ZAZY">
         <h1 class="main_title">クリアできるかな？</h1>
-        <a href="index2.html" class="start-btn" style="text-decoration: none;">START</a>
+        <a id="pull" href="index2.html" class="start-btn" style="text-decoration: none;">START</a>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+         // ここに処理を追加
+         $("#pull").on("click", function() {
+         const omikuji1 = Math.floor(Math.random() * 1);
+         console.log(omikuji1);
+         if(omikuji1 === 0) {
+         window.location.href = "index2.html";
+         } else {
+         window.location.href = "index3.html";
+         }
+         });
+        </script>
     </div> 
     <footer>
         <p><small>2021 G's FUKUOKA DEV10-04</small></p>
