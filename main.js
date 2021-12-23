@@ -12,8 +12,8 @@ const SMOOTHING = false;
 const GAME_SPEED = 1000/60;
 
 // 画面サイズ
-const SCREEN_W = 800;
-const SCREEN_H = 400;
+const SCREEN_W = 700;
+const SCREEN_H = 380;
 
 // キャンバスサイズ
 const CANVAS_W = SCREEN_W * 2;
@@ -25,6 +25,25 @@ const FIELD_H = SCREEN_H + 40;
 
 // 星の数
 const STAR_MAX = 300;
+
+const music = new Audio();
+function init() {
+    music.preload = "auto";
+    music.src = "NES-Shooter-A01-1(Stage).mp3";
+    music.load();
+
+    music.addEventListener("ended", function() {
+        music.currentTime = 0;
+        music.play();
+    }, false);
+}
+
+function play() {
+    music.loop = true;
+    music.play();
+}
+
+init();
 
 // キャンバス
 let can = document.getElementById("can");
@@ -214,8 +233,7 @@ function gameloop() {
             gameCount = 0;
             starSpeedReq = 200;
         }
-    }
-    else if(gameWave === 1) {
+    } else if(gameWave === 1) {
         if(rand(0, 15) === 1) {
             teki.push(new Teki(1, rand(0,FIELD_W) << 8, 0, 0, rand(300, 1200)));
         }
@@ -224,8 +242,7 @@ function gameloop() {
             gameCount = 0;
             starSpeedReq = 100;
         }
-    }
-    else if(gameWave === 2) {
+    } else if(gameWave === 2) {
         if(rand(0, 10) === 1) {
             let r = rand(0, 1);
             teki.push(new Teki(r, rand(0,FIELD_W) << 8, 0, 0, rand(300, 1200)));
@@ -236,9 +253,7 @@ function gameloop() {
             teki.push(new Teki(2, (FIELD_W / 2) << 8, -(70 << 8), 0, 200));
             starSpeedReq = 600;
         }
-    }
-    else if(gameWave === 3) {
-        
+    } else if(gameWave === 3) {
         if(teki.length === 0) {
             gameWave = 0;
             gameCount = 0;

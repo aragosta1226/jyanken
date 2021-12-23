@@ -174,7 +174,7 @@ function tekiMove03(obj) {
     obj.sn = 75;
 }
 
-//ボスの仲間　マコちゃん
+//ボスの仲間　チャーリー
 function tekiMove04(obj) {
     if(obj.count === 10) {
         obj.vx = obj.vy = 0;
