@@ -1,0 +1,29 @@
+.mainvisual {
+	position: relative;
+}
+
+.start-btn {
+    position: absolute;
+    top: 70%;
+    left: 25%;
+    font-size: 21px;
+    color: black;
+    background-color: yellow;
+	width: 200px;
+	/* height: 80px; */
+	margin: 0 auto;
+	padding: 10px 0;
+    padding-top: 20px;
+	text-align: center;
+	border: 1px solid #4a4a4a;
+	border-radius: 5px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.7);
+	margin-bottom: 48px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+  }
+
+.start-btn:hover {
+	opacity: 0.7;
+}

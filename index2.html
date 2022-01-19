@@ -17,5 +17,28 @@
     <audio loop="loop" autoplay="autoplay" > 
     <source type="audio/mpeg" src="NES-Shooter-A01-1(Stage).mp3">
     </audio>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+    $("#save").on("click", function () {
+      const text = $("#text_area").val();
+      localStorage.setItem("memo", text);
+    });
+
+    $("#clear").on("click", function () {
+      localStorage.removeItem("memo");
+      $("#text_area").val("");
+    });
+
+    if(localStorage.getItem("memo")) {
+      const text = localStorage.getItem("memo");
+      $("#text_area").val(text);
+    }
+    
+  </script>
+
+  </script>
+
 </body>
 </html> 
