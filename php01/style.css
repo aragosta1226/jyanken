@@ -1,0 +1,148 @@
+* {
+    margin: 0; padding: 0; list-style: none;
+}
+
+body {
+    background-image: url("top.jpeg");
+    text-align: center;
+}
+
+form {
+    /* width: 300px; */
+    /* height: 780px; */
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* fieldset {
+    justify-content: center;
+} */
+
+.djs {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    /* width: 500px;
+    height: 780px; */
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff;
+}
+
+th {
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+legend {
+    color: red;
+    font-size: 200px;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 0.06em;
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+table {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+#text {
+    width: 400px;
+    height: 30px;
+    margin: 20px;
+}
+
+tbody {
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+section {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.btn_02_a {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    /* padding: 1.5rem .5rem; */
+    background-color: #e22939;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    margin: 20px 20px;
+    width: 250px;
+    height: 50px;
+}
+
+.btn_02_a:hover {
+    background: #000000;
+}
+
+.btn_02_a span {
+    position: relative;
+    padding-left: 36px;
+}
+
+.btn_02_a span:before {
+    content: "";
+    width: 26px;
+    height: 26px;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -13px;
+}
+
+.btn_02_a span:after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border: 0;
+    border-top: 3px solid #e22939;
+    border-right: 3px solid #e22939;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    margin-top: -5px;
+}
+
+.btn_02_a:hover span:after {
+    border-top: 3px solid #000000;
+    border-right: 3px solid #000000;
+}
+
+/*---------------------
+フッター
+---------------------*/
+footer {
+	text-align: center;
+}
+
+footer p {
+	color: #fff;
+	font-size: 18px;
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
